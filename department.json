@@ -1,0 +1,30 @@
+{
+  "departmentInfo": {
+    "code": "BCA",
+    "name": "Department of Computer Applications",
+    "shortName": "BCA Department",
+    "institution": "Apex Institute of Science & Technology",
+    "university": "State Technical University (Autonomous)",
+    "tagline": "Empowering Next-Generation Technologists, Innovators & Leaders",
+    "establishedYear": 2004,
+    "accreditation": [
+      { "body": "NAAC", "grade": "A++ (Cycle 3)", "score": "3.72/4.0" },
+      { "body": "NBA", "grade": "Tier-1 Accredited", "validity": "2024-2029" },
+      { "body": "AICTE", "grade": "Approved Institution", "code": "STU-10293" }
+    ],
+    "hod": {
+      "name": "Dr. Aris Thorne, Ph.D.",
+      "designation": "Head of Department & Senior Professor",
+      "qualifications": "Ph.D. in Computer Science (IIT Bombay), M.Tech (Software Eng), B.Tech (CSE)",
+      "email": "hod.bca@apextech.edu",
+      "phone": "+91 (080) 4567-8901",
+      "officeLocation": "Tech Block-A, 3rd Floor, Room 301"
+    },
+    "contact": {
+      "address": "Tech Block-A, Apex Institute Campus, Innovation Valley, Bengaluru, Karnataka 560068",
+      "email": "bca.admissions@apextech.edu",
+      "phone": "+91 (080) 4567-8900 / 8902",
+      "workingHours": "Monday – Saturday: 9:00 AM – 5:00 PM"
+    }
+  }
+}

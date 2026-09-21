@@ -1,0 +1,325 @@
+/**
+ * BCA Department Portal - Responsive Media Queries & Print Styles
+ */
+
+/* ==========================================================================
+   Mobile Drawer & Navigation Overlay (Hidden on desktop)
+   ========================================================================== */
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 82%;
+  max-width: 360px;
+  height: 100vh;
+  background: #ffffff;
+  z-index: var(--z-drawer);
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: var(--space-xl) var(--space-lg);
+  overflow-y: auto;
+}
+
+.mobile-nav-drawer.open {
+  right: 0;
+}
+
+.mobile-drawer-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: calc(var(--z-drawer) - 1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.mobile-drawer-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: var(--space-lg);
+}
+
+.mobile-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.mobile-nav-links a:hover, .mobile-nav-links a.active {
+  background: #eff6ff;
+  color: var(--primary-accent);
+}
+
+.mobile-drawer-footer {
+  margin-top: auto;
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ==========================================================================
+   Breakpoints: Large Desktops (max-width: 1200px)
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 2.75rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1.25fr;
+    gap: var(--space-xl);
+  }
+}
+
+/* ==========================================================================
+   Breakpoints: Tablets & Medium Desktops (max-width: 992px)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-toggle-btn {
+    display: flex;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-badges-row {
+    justify-content: center;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+/* ==========================================================================
+   Breakpoints: Small Tablets & Mobile Devices (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  :root {
+    --space-3xl: 3rem;
+    --space-2xl: 2rem;
+  }
+
+  .top-ticker {
+    font-size: 0.8rem;
+  }
+
+  .brand-title {
+    font-size: 1rem;
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 2.15rem;
+  }
+
+  .hero-lead {
+    font-size: 1.05rem;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .section-desc {
+    font-size: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-value {
+    font-size: 1.75rem;
+  }
+
+  .semester-selector-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .semester-tabs {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    flex-wrap: nowrap;
+  }
+
+  .semester-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .curriculum-search-box {
+    width: 100%;
+  }
+
+  .faculty-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .notice-card {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .notice-date-box {
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    padding: 0.35rem 0.65rem;
+    width: fit-content;
+  }
+
+  .notice-date-day {
+    font-size: 1rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   Breakpoints: Extra Small Screens (max-width: 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .hero-card {
+    padding: var(--space-md);
+  }
+
+  .hero-card-quicklinks {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .btn-search-trigger span {
+    display: none;
+  }
+
+  .modal-dialog {
+    margin: 0.5rem;
+    max-height: 94vh;
+  }
+
+  .modal-header, .modal-body, .modal-footer {
+    padding: var(--space-md);
+  }
+}
+
+/* ==========================================================================
+   Print Stylesheet
+   ========================================================================== */
+@media print {
+  .site-header,
+  .top-ticker,
+  .site-footer,
+  .mobile-toggle-btn,
+  .btn-search-trigger,
+  .hero-cta-group,
+  .curriculum-search-box,
+  .modal-backdrop,
+  .faq-section-wrapper,
+  .contact-form-card {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt;
+  }
+
+  .curriculum-table {
+    border: 1px solid #000000;
+  }
+
+  .curriculum-table th, .curriculum-table td {
+    border: 1px solid #000000;
+    color: #000000 !important;
+    padding: 6pt;
+  }
+
+  .section {
+    padding: 1rem 0;
+    page-break-inside: avoid;
+  }
+}

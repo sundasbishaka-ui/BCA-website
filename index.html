@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Department of Computer Applications (BCA) - Apex Institute. Offering premier undergraduate computing education, NEP-2020 aligned curriculum, cutting-edge AI/ML, Cloud & DevOps labs, and stellar campus placements.">
+  <meta name="keywords" content="BCA, Bachelor of Computer Applications, Computer Science, Apex Institute, Software Engineering, AI, ML, Cloud Computing, BCA Curriculum, BCA Admissions">
+  <meta name="theme-color" content="#0a2540">
+  <title>Department of Computer Applications (BCA) | Apex Institute of Science & Technology</title>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Accessible Skip Navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Ticker -->
+  <div class="top-ticker" role="region" aria-label="Urgent Announcements">
+    <div class="container top-ticker-content">
+      <span class="ticker-label">
+        <span aria-hidden="true">🔔</span> Notice
+      </span>
+      <div class="ticker-text" id="tickerMessage">
+        Loading latest departmental announcements...
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#home" class="brand-logo" aria-label="BCA Department Homepage">
+        <div class="brand-icon-box" aria-hidden="true">&lt;/&gt;</div>
+        <div class="brand-meta">
+          <span class="brand-title" id="brandTitle">Department of Computer Applications</span>
+          <span class="brand-subtitle" id="brandSubtitle">Apex Institute &bull; Estd. 2004</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#courses" class="nav-link">Courses</a>
+        <a href="#curriculum" class="nav-link">Curriculum</a>
+        <a href="#faculty" class="nav-link">Faculty</a>
+        <a href="#notices" class="nav-link">Notices</a>
+        <a href="#events" class="nav-link">Events</a>
+        <a href="#facilities" class="nav-link">Facilities</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button 
+          type="button" 
+          class="btn-search-trigger" 
+          aria-label="Open spotlight search dialog">
+          <span>🔍</span>
+          <span>Quick Search</span>
+          <kbd class="kbd-shortcut">Ctrl+K</kbd>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm" style="display: none; @media(min-width: 768px){display: inline-flex;}">
+          Inquire
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button 
+          type="button" 
+          class="mobile-toggle-btn" 
+          id="mobileNavToggle" 
+          aria-label="Toggle navigation menu" 
+          aria-expanded="false" 
+          aria-controls="mobileNavDrawer">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div style="font-weight: 800; font-size: 1.1rem; color: var(--primary);">BCA Navigation</div>
+      <button type="button" class="modal-close-btn" id="closeMobileNav" aria-label="Close mobile navigation">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#home">🏠 Home</a></li>
+      <li><a href="#about">🏛️ About the Department</a></li>
+      <li><a href="#courses">🎓 Academic Programs</a></li>
+      <li><a href="#curriculum">📚 Semester Curriculum</a></li>
+      <li><a href="#faculty">👨‍🏫 Faculty Directory</a></li>
+      <li><a href="#notices">📋 Notice Board</a></li>
+      <li><a href="#events">📅 Events & Workshops</a></li>
+      <li><a href="#facilities">💻 Facilities & Labs</a></li>
+      <li><a href="#contact">✉️ Contact & Admissions</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <button class="btn btn-secondary btn-search-trigger" style="width: 100%;">
+        🔍 Spotlight Search (Ctrl+K)
+      </button>
+      <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center;">
+        Apply / Inquire
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content">
+
+    <!-- 1. HOME / HERO SECTION -->
+    <section id="home" class="hero-section" aria-labelledby="heroMainHeading">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span>✨</span>
+            <span>Premier Undergraduate Computing Portal</span>
+          </div>
+          <h1 class="hero-title" id="heroMainHeading">
+            Architecting Future Leaders in <span class="text-gradient">Computer Applications</span>
+          </h1>
+          <p class="hero-lead" id="heroTagline">
+            Empowering Next-Generation Technologists, Innovators & Leaders through rigorous academics, hands-on cloud labs, and high-impact industrial immersion.
+          </p>
+
+          <div class="hero-badges-row">
+            <span class="hero-badge-pill">🏛️ NAAC A++ (3.72/4.0)</span>
+            <span class="hero-badge-pill">🛡️ NBA Tier-1 Accredited</span>
+            <span class="hero-badge-pill">📜 NEP 2020 Compliant CBCS</span>
+            <span class="hero-badge-pill">🚀 96.4% Placements</span>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#curriculum" class="btn btn-primary">
+              <span>View Semester Curriculum</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="#courses" class="btn btn-secondary">
+              Explore Programs
+            </a>
+            <a href="#notices" class="btn btn-secondary">
+              Latest Circulars
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual / HOD Note Card -->
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="hero-card-header">
+              <div class="hero-card-avatar" aria-hidden="true">👨‍🏫</div>
+              <div>
+                <div class="hero-card-name" id="heroHodName">Dr. Aris Thorne, Ph.D.</div>
+                <div class="hero-card-role" id="heroHodRole">Head of Department & Professor</div>
+              </div>
+            </div>
+            <p class="hero-card-quote" id="heroHodQuote">
+              “Our BCA program bridges computational theory with industrial frontier technologies. From artificial intelligence to cloud architectures, our students graduate with real-world problem-solving capabilities.”
+            </p>
+            <div class="hero-card-quicklinks">
+              <a href="#faculty" class="quicklink-btn">
+                <span>👥</span>
+                <span>Faculty Directory</span>
+              </a>
+              <a href="#facilities" class="quicklink-btn">
+                <span>💻</span>
+                <span>Computing Labs</span>
+              </a>
+              <a href="#events" class="quicklink-btn">
+                <span>⚡</span>
+                <span>ByteCraft Hackathon</span>
+              </a>
+              <a href="#contact" class="quicklink-btn">
+                <span>📍</span>
+                <span>Admissions Desk</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KPI STATS COUNTER STRIP -->
+    <section class="stats-strip" aria-label="Department Key Statistics">
+      <div class="container">
+        <div class="stats-grid" id="statsGridContainer">
+          <!-- Dynamically populated from BCA_DATA.stats -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT THE DEPARTMENT -->
+    <section id="about" class="section" aria-labelledby="aboutSectionTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Department Profile</span>
+          <h2 class="section-title" id="aboutSectionTitle">About the BCA Department</h2>
+          <p class="section-desc" id="aboutOverviewText">
+            Established in 2004, the Department of Computer Applications is a premier center of excellence fostering high-caliber computing professionals.
+          </p>
+        </div>
+
+        <!-- Vision & Mission Grid -->
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="about-card-icon" aria-hidden="true">🎯</div>
+            <h3 class="about-card-title">Our Vision</h3>
+            <p class="about-card-text" id="aboutVisionText">
+              To be recognized globally as a center of transformative computing education, pioneering applied research, and producing socially responsible technocrats equipped to lead the digital revolution.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <div class="about-card-icon" aria-hidden="true">🚀</div>
+            <h3 class="about-card-title">Our Mission</h3>
+            <ul class="mission-list" id="aboutMissionList">
+              <!-- Populated dynamically -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- Program Educational Objectives (PEOs) -->
+        <div style="margin-top: var(--space-2xl);">
+          <div style="text-align: center; margin-bottom: var(--space-lg);">
+            <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--primary);">
+              Program Educational Objectives (PEOs)
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Defined outcomes our graduates attain within 3 to 5 years of completing their degree.
+            </p>
+          </div>
+          <div class="peo-grid" id="aboutPeoGrid">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- Institutional Strengths & MoUs -->
+        <div style="margin-top: var(--space-2xl);">
+          <div style="text-align: center; margin-bottom: var(--space-lg);">
+            <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--primary);">
+              Department Strengths & Industry Partnerships
+            </h3>
+          </div>
+          <div class="peo-grid" id="aboutStrengthsGrid">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. COURSES & DEGREE PROGRAMS -->
+    <section id="courses" class="section section-alt" aria-labelledby="coursesSectionTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Academic Programs</span>
+          <h2 class="section-title" id="coursesSectionTitle">Degree Programs & Tracks</h2>
+          <p class="section-desc">
+            Rigorous undergraduate degree tracks offering specialized elective paths in Cloud Computing, Artificial Intelligence, and Full-Stack Software Engineering.
+          </p>
+        </div>
+
+        <div class="courses-grid" id="coursesGrid">
+          <!-- Populated dynamically from BCA_DATA.programs -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SEMESTER-WISE CURRICULUM -->
+    <section id="curriculum" class="section" aria-labelledby="curriculumSectionTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Syllabus & Schemes</span>
+          <h2 class="section-title" id="curriculumSectionTitle">Semester-Wise Curriculum</h2>
+          <p class="section-desc">
+            Explore the NEP-2020 Choice-Based Credit System (CBCS) curriculum from Semester 1 through Semester 6. Click any course for unit outlines.
+          </p>
+        </div>
+
+        <div class="curriculum-wrapper">
+          <div class="semester-selector-bar">
+            <!-- Semester Buttons -->
+            <div class="semester-tabs" id="semesterTabs" role="tablist" aria-label="Semester selection tabs">
+              <!-- Dynamically populated -->
+            </div>
+
+            <!-- Course Search & PDF Download Action -->
+            <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+              <div class="curriculum-search-box">
+                <span class="search-icon-inside" aria-hidden="true">🔍</span>
+                <input 
+                  type="text" 
+                  id="curriculumSearch" 
+                  class="curriculum-search-input" 
+                  placeholder="Filter courses in semester..." 
+                  aria-label="Filter courses in active semester" />
+              </div>
+              <button 
+                type="button" 
+                class="btn btn-secondary btn-sm" 
+                id="downloadSyllabusBtn" 
+                aria-label="Download full semester syllabus PDF">
+                📥 Download PDF
+              </button>
+            </div>
+          </div>
+
+          <!-- Semester Header Meta -->
+          <div class="curriculum-meta-summary" id="curriculumMeta">
+            <!-- Populated dynamically -->
+          </div>
+
+          <!-- Dynamic Curriculum Table Container -->
+          <div id="curriculumContainer">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FACULTY MEMBERS -->
+    <section id="faculty" class="section section-alt" aria-labelledby="facultySectionTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Mentors & Researchers</span>
+          <h2 class="section-title" id="facultySectionTitle">Distinguished Faculty Members</h2>
+          <p class="section-desc">
+            Learn from accomplished educators, active researchers, and industry consultants committed to student mentorship and groundbreaking technical discovery.
+          </p>
+        </div>
+
+        <!-- Faculty Filters & Search Controls -->
+        <div class="faculty-controls">
+          <div class="faculty-filter-pills" id="facultyFilterPills" role="toolbar" aria-label="Filter faculty by role">
+            <!-- Populated dynamically -->
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+            <span id="facultyCountDisplay" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">
+              Showing all faculty members
+            </span>
+            <div class="curriculum-search-box" style="min-width: 260px;">
+              <span class="search-icon-inside" aria-hidden="true">🔍</span>
+              <input 
+                type="text" 
+                id="facultySearchInput" 
+                class="curriculum-search-input" 
+                placeholder="Search faculty by name or domain..." 
+                aria-label="Search faculty directory by name, designation or domain" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Faculty Grid -->
+        <div class="faculty-grid" id="facultyGrid">
+          <!-- Populated dynamically from BCA_DATA.faculty -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. NOTICES & ANNOUNCEMENTS -->
+    <section id="notices" class="section" aria-labelledby="noticesSectionTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Official Circulars</span>
+          <h2 class="section-title" id="noticesSectionTitle">Notices & Announcements</h2>
+          <p class="section-desc">
+            Official department notices, examination datesheets, campus placement notifications, and academic circulars.
+          </p>
+        </div>
+
+        <div class="notices-layout">
+          <!-- Filter and Search Bar -->
+          <div class="notices-filter-bar">
+            <div class="notices-categories" id="noticesCategoryTabs" role="toolbar" aria-label="Filter notices by category">
+              <!-- Populated dynamically -->
+            </div>
+
+            <div class="curriculum-search-box" style="min-width: 260px;">
+              <span class="search-icon-inside" aria-hidden="true">🔍</span>
+              <input 
+                type="text" 
+                id="noticesSearchInput" 
+                class="curriculum-search-input" 
+                placeholder="Search circulars by keyword..." 
+                aria-label="Search notices and circulars" />
+            </div>
+          </div>
+
+          <!-- Notice List -->
+          <div class="notices-list" id="noticesList">
+            <!-- Populated dynamically from BCA_DATA.notices -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. EVENTS & WORKSHOPS -->
+    <section id="events" class="section section-alt" aria-labelledby="eventsSectionTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Campus Buzz</span>
+          <h2 class="section-title" id="eventsSectionTitle">Department Events & Workshops</h2>
+          <p class="section-desc">
+            Experience our vibrant campus tech culture through 36-hour hackathons, AI masterclasses, industry bootcamps, and alumni panels.
+          </p>
+        </div>
+
+        <!-- Upcoming vs Past Toggle -->
+        <div class="events-toggle-bar">
+          <button 
+            type="button" 
+            class="events-toggle-btn active" 
+            data-type="Upcoming"
+            aria-pressed="true">
+            Upcoming Events & Bootcamps
+          </button>
+          <button 
+            type="button" 
+            class="events-toggle-btn" 
+            data-type="Past"
+            aria-pressed="false">
+            Past Events Archive
+          </button>
+        </div>
+
+        <!-- Events Grid -->
+        <div class="events-grid" id="eventsGrid">
+          <!-- Populated dynamically from BCA_DATA.events -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FACILITIES & INFRASTRUCTURE -->
+    <section id="facilities" class="section" aria-labelledby="facilitiesSectionTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">World-Class Infrastructure</span>
+          <h2 class="section-title" id="facilitiesSectionTitle">Department Facilities & Laboratories</h2>
+          <p class="section-desc">
+            State-of-the-art computing environments equipped with high-end GPUs, air-gapped security sandboxes, IoT prototyping benches, and comprehensive digital libraries.
+          </p>
+        </div>
+
+        <!-- Facilities Grid -->
+        <div class="facilities-grid" id="facilitiesGrid">
+          <!-- Populated dynamically from BCA_DATA.facilities -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. CONTACT & ADMISSIONS -->
+    <section id="contact" class="section section-alt" aria-labelledby="contactSectionTitle">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Get in Touch</span>
+          <h2 class="section-title" id="contactSectionTitle">Contact Department Office</h2>
+          <p class="section-desc">
+            Have questions about BCA admissions, credit transfers, campus placements, or research projects? Our staff is here to help.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Office Information -->
+          <div class="contact-info-card">
+            <div class="contact-info-header">
+              <h3>Department Headquarters</h3>
+              <p>
+                Visit us during regular university working hours or reach out directly via telephone and email.
+              </p>
+            </div>
+
+            <div id="contactOfficeDetails">
+              <!-- Populated dynamically -->
+            </div>
+
+            <div style="background: var(--bg-surface-secondary); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); margin-top: auto;">
+              <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--primary); margin-bottom: 0.25rem;">
+                Looking for Campus Tour?
+              </h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.75rem;">
+                Prospective students and parents can schedule guided visits to our AI and Cloud laboratories every Friday.
+              </p>
+              <a href="mailto:bca.admissions@apextech.edu?subject=Campus%20Tour%20Request" class="btn btn-secondary btn-sm">
+                Request Campus Visit &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Inquiry Form -->
+          <div class="contact-form-card">
+            <h3 class="form-title">Send Us an Inquiry</h3>
+            <p class="form-subtitle">Fill in your information below and our academic counseling team will respond promptly.</p>
+
+            <div id="formFeedbackAlert" class="form-feedback-alert" role="alert"></div>
+
+            <form id="departmentContactForm" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="inquiryName" class="form-label">Full Name *</label>
+                  <input type="text" id="inquiryName" class="form-input" placeholder="e.g. Maya Sharma" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="inquiryEmail" class="form-label">Email Address *</label>
+                  <input type="email" id="inquiryEmail" class="form-input" placeholder="name@domain.com" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="inquiryPhone" class="form-label">Contact Phone / Mobile *</label>
+                  <input type="tel" id="inquiryPhone" class="form-input" placeholder="+91 98765 43210" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="inquiryCategory" class="form-label">Inquiry Subject *</label>
+                  <select id="inquiryCategory" class="form-select" required>
+                    <option value="Admissions & Eligibility">BCA Admissions & Eligibility</option>
+                    <option value="Curriculum & Electives">Curriculum & NEP Scheme</option>
+                    <option value="Placements & Internships">Campus Placements & Corporate MoUs</option>
+                    <option value="Alumni / Student Verification">Student Verification / Transcripts</option>
+                    <option value="General Queries">General Department Inquiries</option>
+                  </select>
+                </div>
+
+                <div class="form-group form-group-full">
+                  <label for="inquiryMessage" class="form-label">Message / Questions *</label>
+                  <textarea id="inquiryMessage" class="form-textarea" placeholder="Please specify your query or questions regarding the BCA program..." required></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Submit Inquiry to BCA Office
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Frequently Asked Questions (FAQ) Accordion -->
+        <div class="faq-section-wrapper" aria-labelledby="faqHeading">
+          <div style="text-align: center; margin-bottom: var(--space-xl);">
+            <span class="section-badge">Help Desk</span>
+            <h3 style="font-size: 1.75rem; font-weight: 800; color: var(--primary);" id="faqHeading">
+              Frequently Asked Questions
+            </h3>
+            <p style="color: var(--text-secondary); font-size: 1rem;">
+              Quick answers to common questions about eligibility, NEP structure, and student life.
+            </p>
+          </div>
+
+          <div id="faqAccordionContainer">
+            <!-- Populated dynamically from BCA_DATA.faqs -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="brand-icon-box" style="width: 38px; height: 38px; font-size: 1rem;" aria-hidden="true">&lt;/&gt;</div>
+          <span class="footer-logo-title">Department of Computer Applications</span>
+        </div>
+        <p class="footer-desc">
+          Apex Institute of Science & Technology. Producing top-echelon computing leaders, full-stack engineers, and cloud architects since 2004.
+        </p>
+        <div class="footer-badges" id="footerAccreditations">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Department</a></li>
+          <li><a href="#courses">Academic Programs</a></li>
+          <li><a href="#curriculum">Semester Curriculum</a></li>
+          <li><a href="#faculty">Faculty Directory</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <ul class="footer-links">
+          <li><a href="#notices">Official Circulars</a></li>
+          <li><a href="#events">Tech Events & Hackathons</a></li>
+          <li><a href="#facilities">Laboratories & Library</a></li>
+          <li><a href="#contact">Admissions FAQ</a></li>
+          <li><a href="data/department.json" target="_blank">Open Department Data (JSON)</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Campus Desk</div>
+        <div class="footer-contact-info">
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📍</span>
+            <span id="footerAddress">Tech Block-A, Apex Institute Campus, Innovation Valley, Bengaluru 560068</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📞</span>
+            <span id="footerPhone">+91 (080) 4567-8900</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">✉</span>
+            <span id="footerEmail">bca.admissions@apextech.edu</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">👨‍🏫</span>
+            <span id="footerHodName">Dr. Aris Thorne (HOD)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>
+        &copy; <span id="footerCurrentYear">2026</span> Department of Computer Applications, Apex Institute. All rights reserved.
+      </div>
+      <div class="footer-bottom-links">
+        <a href="#home">Back to Top &uarr;</a>
+        <a href="javascript:void(0)" onclick="alert('Apex Institute adheres strictly to WCAG 2.1 AA accessibility guidelines.');">Accessibility</a>
+        <a href="javascript:void(0)" onclick="alert('Student data is protected under institutional cybersecurity and privacy mandates.');">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Modal Dialog -->
+  <div class="modal-backdrop" id="genericModal" role="dialog" aria-modal="true" aria-labelledby="genericModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="genericModalTitle">Details</h3>
+        <button type="button" class="modal-close-btn" data-modal-close aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Injected via JavaScript -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-modal-close>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Spotlight Quick Search Modal (Cmd/Ctrl + K) -->
+  <div class="modal-backdrop" id="spotlightModal" role="dialog" aria-modal="true" aria-label="Spotlight Quick Search">
+    <div class="modal-dialog spotlight-dialog">
+      <div class="spotlight-search-header">
+        <span style="font-size: 1.25rem;" aria-hidden="true">🔍</span>
+        <input 
+          type="text" 
+          id="spotlightSearchInput" 
+          class="spotlight-input" 
+          placeholder="Search courses, curriculum, faculty, notices..." 
+          aria-label="Spotlight Quick Search Input" />
+        <button type="button" class="modal-close-btn" data-modal-close aria-label="Close search">&times;</button>
+      </div>
+      <div class="spotlight-results-list" id="spotlightResults">
+        <!-- Injected via JavaScript -->
+      </div>
+      <div class="modal-footer" style="justify-content: space-between; font-size: 0.8rem; color: var(--text-muted);">
+        <span>Press <kbd class="kbd-shortcut">ESC</kbd> to close</span>
+        <span>Instant index search</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts: Data First, Components Next, App Orchestrator Last -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/components/navigation.js"></script>
+  <script src="assets/js/components/curriculum.js"></script>
+  <script src="assets/js/components/faculty.js"></script>
+  <script src="assets/js/components/notices.js"></script>
+  <script src="assets/js/components/events.js"></script>
+  <script src="assets/js/components/facilities.js"></script>
+  <script src="assets/js/components/contact.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
